@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<problem type="lecture" showanswer="attempted" rerandomize="never" title="Short Answer" display_name="Short Answer">
+  <text>
+    <h2>Example: Short answer problem using CustomResponse</h2>
+    <p>
+Sometimes it is desirable to ask for a short answer response, which may be several words, a sentence, or a paragraph, in length.  This can be accomplished using a customresponse with a textbox input element.
+</p>
+    <script type="text/python">
+def lsa_check(expect,ans):
+    if "problem" in ans:
+        return {'ok': True, 'msg': 'Exactly!'}
+    else:
+        return {'ok': False, 'msg': 'What?' }
+</script>
+    <p>
+Describe the strengths of the edX system:
+    <customresponse cfn="lsa_check" expect=""><textbox rows="40"/></customresponse>
+</p>
+  </text>
+</problem>

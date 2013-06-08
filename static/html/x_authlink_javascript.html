@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+</head>
+
+<body style="font-family: Arial;border: 0 none;">
+<p>You are edX userid = <span id='data_div'></span></p>
+
+<button id="pushme">Push Me</button>
+<p>Your CS50 ID = <span id="res"></span></p>
+
+    <script type="text/javascript">
+    var userid;
+
+   	// get userid from problem
+      	gx = parent.document.getElementById('edXdata');
+      	userid = gx.getAttribute('userid');		// should be a JSON string
+
+     $('#data_div').text(userid);
+
+    	// debugging
+	console.debug('==> got userid:' + userid);
+
+$("#pushme").click(function(){
+  $.getJSON('http://ichuang.mitx.mit.edu/test/testauth.php?callback=?','userid='+userid,function(res){
+      $('#res').text(res.cs50id);
+      // alert('Your CS50 ID is'+res.cs50id);
+
+	// get the input element ; its ID is stored as the attribute "inputid" in a div with name "jsinput"
+      	jsi_div = parent.document.getElementsByName('jsinput')[0];
+     	jsi_id = jsi_div.getAttribute('inputid');
+	jsi = parent.document.getElementById(jsi_id);
+        jsi.value = res.cs50id;
+  });
+});
+
+</script></body></html>

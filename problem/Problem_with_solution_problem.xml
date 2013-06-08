@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<problem type="lecture" showanswer="attempted" rerandomize="never" title="Problem with solution" display_name="Problem with solution">
+  <text>
+    <h2>Example: Problem with Solution</h2>
+    <p>
+Any problem may also include a &lt;solution&gt; stanza.  The contents of that stanza are shown when "show answer" is clicked.
+</p>
+    <p>
+This mechanism is helpful for typical "problem set" type questions, which may have involved solutions with detailed explanations.</p>
+    <script type="loncapa/python">
+I = "m*c^2"
+</script>
+    <text><br/>
+Give an equation for the relativistic energy of an object with mass m.  Explicitly indicate multiplication with a <tt>*</tt> symbol.<br/>
+</text>
+    <formularesponse type="cs" samples="m,c@1,2:3,4#10" answer="$I">
+      <responseparam description="Numerical Tolerance" type="tolerance" default="0.00001" name="tol"/>
+      <br/>
+      <text>E =</text>
+      <textline size="40" math="1"/>
+    </formularesponse>
+    <solution>
+      <text>
+Einstein's equation for relativistic energy is \(E = mc^2\), but this energy is rarely available to perform work.  The kinetic  energy of an object with mass \(m\) moving with velocity \(v\) is \(\frac{1}{2}mv^2\).  
+</text>
+    </solution>
+  </text>
+</problem>

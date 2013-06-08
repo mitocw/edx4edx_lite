@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+
+      // get data and titles from problem
+      gx = parent.document.getElementById('graphX');
+      the_title = gx.getAttribute('title');
+      data_str = gx.getAttribute('data');		// should be a JSON string
+      data_array = eval(data_str)
+
+console.debug('data array:');
+	console.debug(data_array);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable(data_array);
+        var options = {
+          title: the_title
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+
+<body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+</body> </html>

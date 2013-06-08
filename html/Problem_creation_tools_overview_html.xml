@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<html display_name="Problem creation tools: overview">
+  <body>
+    <h1> Problem Creation Tools for edX Authors</h1>
+    <p>A number of scripts are available to assist edX authors in creation
+of problems.  These include:</p>
+    <pre>
+  latex2edx -- a set of scripts for converting latex-format problem sets into edX format
+  word2edx -- a set of scripts for importing microsoft Word format problem sets into edX format
+
+
+</pre>
+    <p>
+These tools are rather rudimentary at this point in time, but they
+have already been tested on files from at least one course.  None of
+these tools automates the process of generating good assessment
+problems, ie with proper problem checking code, and well framed questions.
+</p>
+  </body>
+</html>

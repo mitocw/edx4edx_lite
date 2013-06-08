@@ -1,0 +1,83 @@
+<html>
+
+<head>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {packages: ['orgchart', 'table']});
+    </script>
+    <script type="text/javascript">
+    var map;
+    var table;
+    var data;
+
+      	// get data and titles from problem
+      	gx = parent.document.getElementById('graphX');
+      	the_title = gx.getAttribute('title');
+      	data_str = gx.getAttribute('data');		// should be a JSON string
+      	data_array = eval(data_str)
+
+	// get the input element ; its ID is stored as the attribute "inputid" in a div with name "jsinput"
+      	jsi_div = parent.document.getElementsByName('jsinput')[0];
+     	jsi_id = jsi_div.getAttribute('inputid');
+	jsi = parent.document.getElementById(jsi_id);
+
+    	// debugging
+	console.debug('data array:');
+	console.debug(data_array);
+	console.debug('jsi_id = ' + jsi_id);
+	console.debug('jsi = ' + jsi);
+	console.debug('jsi initial value = ' + jsi.value);
+ 
+function drawOrgChartAndTable() {
+  var data = google.visualization.arrayToDataTable(data_array);
+
+  var orgchart = new google.visualization.OrgChart(document.getElementById('orgchart'));
+  orgchart.draw(data, null);
+
+  var table = new google.visualization.Table(document.getElementById('table'));
+  table.draw(data, null);
+
+  // select initial choice, if not empty
+  for (var k = 0; k < data.getNumberOfRows(); k++) {
+      if (jsi.value == data.getValue(k,0)){
+          orgchart.setSelection([{row:k, column:null}]);
+      }
+  }
+
+  // When the table is selected, update the orgchart.
+  google.visualization.events.addListener(table, 'select', function() {
+    sel = table.getSelection();
+    orgchart.setSelection(sel);
+    console.debug('sel = ' + sel);
+    console.debug('row = ' + sel[0].row);
+    console.debug('col = ' + sel[0].col);
+    jsi.value = data.getValue(sel[0].row,0);
+  });
+
+  // When the orgchart is selected, update the table visualization.
+  google.visualization.events.addListener(orgchart, 'select', function() {
+    sel = orgchart.getSelection();
+    table.setSelection(sel);
+    console.debug('sel = ' + sel);
+    console.debug('row = ' + sel[0].row);
+    console.debug('col = ' + sel[0].col);
+    jsi.value = data.getValue(sel[0].row,0);
+  });
+}
+
+google.setOnLoadCallback(drawOrgChartAndTable);
+</script>
+</head>
+  <body style="font-family: Arial;border: 0 none;">
+    <table>
+      <tr>
+        <td>
+          <div id="orgchart" style="width: 300px; height: 180px;"></div>
+        </td>
+        <td>
+          <div id="table" style="width: 300px; height: 180px;"></div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

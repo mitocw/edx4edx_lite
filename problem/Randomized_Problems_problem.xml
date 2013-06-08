@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<problem type="lecture" showanswer="attempted" rerandomize="true" title="Randomized Problems" display_name="Randomized Problems">
+  <text>
+    <h2>Randomization and Numerical Response Problems</h2>
+    <p>
+Custom response and numerical response problems may also be written to
+provide randomization of problems.  Randomization can be used to
+change the question asked, so that each student gets a different
+question.  This helps discourage automated cheating, for example.</p>
+    <p>Note that <i>how often</i> a problem is re-randomized is determined
+by settings defined within <tt>course.xml</tt>.  For example, problems
+can be re-randomized (ie the seed for the random number generator
+changed) every time the problem is viewed, or only once per student.</p>
+    <p>Here is a simple example of a randomized problem, written using numerical response.</p>
+    <script type="loncapa/python">
+rx = random.randrange(1,20,1)
+ry = 10-rx
+</script>
+    <p>Let \(x = $rx\).  Give y such that \(x+y=10\):</p>
+    <numericalresponse answer="$ry">
+      <responseparam type="tolerance" default="5%" name="tol" description="Numerical Tolerance"/>
+      <text>
+y = <textline/>
+</text>
+    </numericalresponse>
+  </text>
+</problem>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<problem type="lecture" showanswer="attempted" rerandomize="never" title="Adaptive hints example: History" display_name="Adaptive hints example: History">
+  <text>
+    <p>Hints can be provided to students, based on the history of responses given.  Here is an example of a problem which displays a record of the last 10 inputs given, as a hint to the student.</p>
+    <p>
+What is the value of \(\pi\)?
+</p>
+  </text>
+  <script type="edx/python">
+def last10(answer_ids, student_answers, new_cmap, old_cmap):
+    aid = answer_ids[0]
+    history = old_cmap.get_property(aid,'history',[])
+    history.append(str(student_answers[aid]))
+    if len(history)&gt;10: history = history[-10:]
+    new_cmap.set_property(aid,'history',history)
+    hint = '&lt;br/&gt;You previously responded with: %s' % map(str,history)
+    new_cmap.set_hint_and_mode(aid,hint,'always')
+</script>
+  <numericalresponse answer="3.14159">
+    <responseparam type="tolerance" default="5%" name="tol" description="Numerical Tolerance"/>
+    <textline/>
+    <hintgroup hintfn="last10"/>
+  </numericalresponse>
+</problem>

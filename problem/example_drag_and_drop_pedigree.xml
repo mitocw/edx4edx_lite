@@ -1,0 +1,108 @@
+<problem display_name="Drag and Drop: Pedigree">
+
+<text>
+This is an example of a drag and drop problem with one item per target, and no outline around the targets.
+</text>
+
+    <customresponse>
+        <text>
+            <p>
+                Consider the following pedigree for a rare genetic disease: 
+            </p>
+        </text>
+        <drag_and_drop_input img="/static/images/pedigree.png"
+            target_outline="false" one_per_target="true" no_labels="true">
+            <draggable id="1" label="AA unaffected" />
+            <draggable id="2" label="Aa unaffected" />
+            <draggable id="3" label="aa affected" />
+
+            <target id="t1" x="60" y="60" w="90" h="90"/>
+            <target id="t2" x="230" y="50" w="90" h="90"/>
+            <target id="t3" x="60" y="200" w="90" h="90"/>
+            <target id="t4" x="230" y="200" w="90" h="90"/>
+            <target id="t5" x="474" y="200" w="90" h="90"/>
+            <target id="t6" x="230" y="373" w="90" h="90"/>
+            <target id="t7" x="474" y="373" w="90" h="90"/>
+
+        </drag_and_drop_input>
+        <answer type="loncapa/python"><![CDATA[
+correct_answer = [
+{'draggables': ['1'],
+'targets': ['t1' ],
+'rule':'anyof'
+},
+{'draggables': ['2'],
+'targets': ['t2' ],
+'rule':'anyof'
+},
+{'draggables': ['3'],
+'targets': ['t3' ],
+'rule':'anyof'
+}]
+if draganddrop.grade(submission[0], correct_answer):
+    correct = ['correct']
+else:
+    correct = ['incorrect']
+]]>
+        </answer>
+    </customresponse>
+
+
+    <text>
+        <p>
+            Label all individuals in the pedigree with all consistent
+            genotypes. Drag genotypes from the green boxes in the box above
+            to the pedigree. Overlap genotypes with the circle or square
+            they label. Genotypes may be used as many times as needed.
+        </p>
+    </text>
+
+<hr width="50%"/>
+<p>Here is the XML code for this problem:</p>
+<pre>
+    &lt;customresponse>
+        &lt;text>
+            &lt;p>
+                Consider the following pedigree for a rare genetic disease: 
+            &lt;/p>
+        &lt;/text>
+        &lt;drag_and_drop_input img="/static/images/pedigree.png"
+            target_outline="false" one_per_target="true" no_labels="true">
+            &lt;draggable id="1" label="AA unaffected" />
+            &lt;draggable id="2" label="Aa unaffected" />
+            &lt;draggable id="3" label="aa affected" />
+
+            &lt;target id="t1" x="60" y="60" w="90" h="90"/>
+            &lt;target id="t2" x="230" y="50" w="90" h="90"/>
+            &lt;target id="t3" x="60" y="200" w="90" h="90"/>
+            &lt;target id="t4" x="230" y="200" w="90" h="90"/>
+            &lt;target id="t5" x="474" y="200" w="90" h="90"/>
+            &lt;target id="t6" x="230" y="373" w="90" h="90"/>
+            &lt;target id="t7" x="474" y="373" w="90" h="90"/>
+
+        &lt;/drag_and_drop_input>
+        &lt;answer type="loncapa/python">&lt;![CDATA[
+correct_answer = [
+{'draggables': ['1'],
+'targets': ['t1' ],
+'rule':'anyof'
+},
+{'draggables': ['2'],
+'targets': ['t2' ],
+'rule':'anyof'
+},
+{'draggables': ['3'],
+'targets': ['t3' ],
+'rule':'anyof'
+}]
+if draganddrop.grade(submission[0], correct_answer):
+    correct = ['correct']
+else:
+    correct = ['incorrect']
+]]&gt;
+        &lt;/answer>
+    &lt;/customresponse>
+
+</pre>
+
+</problem>

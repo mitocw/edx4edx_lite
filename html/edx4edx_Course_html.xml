@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<html display_name="edx4edx Course">
+  <body>
+    <h1>Introduction</h1>
+    <p>
+edX4edX introduces the edX course system from an authoring standpoint, detailing its motivations and general components.
+Complete with videos, E-text, assessment problems, and interactive and intuitive tutorials, edX4edX provides potential
+authors the necessary skills to build or edit an edX course.
+</p>
+    <h1>edX Content</h1>
+    <p>
+      <span>An edX course consists of three principle content components:</span>
+    </p>
+    <ol>
+      <li><span>Video snippets</span><span> collection </span> - Each video snippet is less than 10 minutes long and is integrated with other course content. 
+</li>
+      <li><span>Assessment problems</span> - Interactive questions presented to students. There may be about 80 problems assigned for a typical 14-week semester long course. 
+</li>
+      <li><span>E-text</span><span> </span> - Content may be pages from a textbook, presented as images or web-formatted content with links.  E-text is also interwoven with video and assessment problems.
+</li>
+    </ol>
+    <p>
+      <span/>
+    </p>
+    <p>
+      <span>
+        <h1>Additional Course Components</h1>
+        <style type="text/css">li {list-style:circle; }</style>
+        <p class="c0">
+          <span>Building on the course content, the edX system provides:</span>
+        </p>
+        <p class="c0 c6">
+          <span/>
+        </p>
+        <ol class="c9" start="1">
+          <li class="c1 c0"><span>A discussion forum for students and instructors </span> - The discussion forum is loosely moderated, and encourages students to answer each other&#x2019;s questions.  It is based on the &#x201C;askbot&#x201D; system, in which good answers are voted up, and common questions can be merged together into a single discussion thread.</li>
+          <li class="c0 c1"><span>A course wiki </span> - The course wiki is open to student-authored content, and typically contains reference material and links amplifying course-provided content.</li>
+          <li class="c1 c0"><span>Performance tracking </span> - The performance tracking system records student progress and grades.</li>
+        </ol>
+      </span>
+    </p>
+    <p class="c0">
+
+</p>
+    <h1>edX4edX Course Goals</h1>
+    <p>The goal of edX4edX is two-fold. First, to explain the
+capabilities and limitations of the courseware prototype.
+Second, to gather inspiration and pedagogical data on online teaching
+from instructors that have run existing edX courses, and to present those to future instructors.
+
+<style type="text/css">li {list-style:circle; }</style></p>
+    <p class="c0">
+      <span>By the end of this course, you should be able to understand, edit, and author:</span>
+    </p>
+    <ol class="c9" start="1">
+      <li class="c8 c0">
+        <span>CourseContent &#x2013; the top-level document specifying the structure and organization of an edX course.<br/></span>
+      </li>
+      <li class="c8 c0">
+        <span>E-text &#x2013; the &#x201C;textbook&#x201D; content associated with an edX course<br/></span>
+      </li>
+      <li class="c8 c0">
+        <span>Video &#x2013; the edX video player system</span>
+      </li>
+      <li class="c8 c0">
+        <span>CapaProblems &#x2013; Assessment problems, which are loosely based on the LON-CAPA concept</span>
+      </li>
+    </ol>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<sequential format="" Due="Dec 12-25" display_name="Advanced Problems: Custom Response &amp; Randomization">
+  <problem url_name="Randomized_Problems_problem"/>
+  <problem url_name="Short_Answer_problem"/>
+  <problem url_name="Custom_response_with_graph"/> 
+</sequential>

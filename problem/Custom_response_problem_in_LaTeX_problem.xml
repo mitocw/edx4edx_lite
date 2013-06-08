@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<problem type="lecture" showanswer="attempted" rerandomize="never" title="Custom response problem in LaTeX" display_name="Custom response problem in LaTeX">
+  <p>
+    <h1>Example of custom response</h1>
+  </p>
+  <p>
+This problem demonstrates a custom response which accepts a student answer even if it is given with quotes. </p>
+  <script>
+def test_str(expect, ans):
+  print expect, ans
+  ans = ans.strip("'")
+  ans = ans.strip('"')
+  return expect == ans.lower()
+</script>
+  <p>
+What is the best programming language that exists today? You may enter your answer in upper or lower case, with or without quotes. </p>
+  <p>
+    <customresponse cfn="test_str" expect="python">
+      <textline correct_answer="python"/>
+    </customresponse>
+  </p>
+  <p>
+Here is the [mathjaxinline]\LaTeX[/mathjaxinline] code for the problem: </p>
+  <pre>
+\documentclass[12pt]{article}
+
+\usepackage{edXpsl}	% edX
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{edXproblem}{Latex Example Custom Problem}{10}
+
+\section{Example of custom response}  
+
+This problem demonstrates a custom response which accepts a student
+answer even if it is given with quotes.
+
+\begin{edXscript}
+def test_str(expect, ans):
+  print expect, ans
+  ans = ans.strip("'")
+  ans = ans.strip('"')
+  return expect == ans.lower()
+\end{edXscript}
+
+What is the best programming language that exists today?   You may
+enter your answer in upper or lower case, with or without quotes.
+
+\edXabox{type="custom" cfn='test_str' expect='python'}
+
+\end{edXproblem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+</pre>
+</problem>

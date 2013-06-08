@@ -1,0 +1,25 @@
+{
+    "course/edx4edx": {
+        "graceperiod": "1 day 5 hours 59 minutes 59 seconds",
+        "start": "2013-02-19T14:15",
+        "display_name": "edX Author Course",
+        "showanswer": "attempted",
+        "rerandomize": "never",
+        "show_calculator": "Yes",
+        "tabs": [ {"type": "courseware"},
+                  {"name": "Course Info", "type": "course_info"},
+                  {"name": "Discussion", "type": "discussion"},
+                  {"name": "Progress", "type": "progress"}
+                ],
+        "discussion_topics": {
+            "General": {
+                "sort_key": "A",
+                "id": "edx4edx_General"
+            }
+        }
+    },
+    "chapter/Assessment_Problems_chapter": {
+        "showanswer": "attempted",
+        "rerandomize": "never"
+    }
+}

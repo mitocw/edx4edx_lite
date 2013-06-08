@@ -1,4 +1,6 @@
-edx4edx_lite
-============
+edx4edx
+=======
 
-edx4edx course for edX authors with sample content
+content repository for edx4edx - course for aspiring edX course authors
+
+Note that some of the latex2edx content needs to be udpated

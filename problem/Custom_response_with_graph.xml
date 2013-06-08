@@ -1,0 +1,15 @@
+<problem>
+<p>
+Customresponse in python_lib, using extra arguments - demonstrate inline plot
+</p>
+
+<script type="loncapa/python">
+from mycfn import *
+</script>
+
+<p>Enter a function \(f\) of \(x\) such that \(\int_0^1 f(x)\, dx=1\): </p>
+<customresponse cfn="test_plot" cfn_extra_args="options" expect="2*x" options="1.0">
+        <textline size="40"/>
+</customresponse>
+
+</problem>

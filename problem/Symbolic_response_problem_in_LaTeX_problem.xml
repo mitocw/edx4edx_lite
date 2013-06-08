@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<problem type="lecture" showanswer="attempted" rerandomize="never" title="Symbolic response problem in LaTeX" display_name="Symbolic response problem in LaTeX">
+  <p>
+    <h1>Example of symbolic response problem</h1>
+  </p>
+  <p>
+This is a sample problem, which is worth 40 points. What is the number made famous by Hitchhiker's guide to the galaxy? </p>
+  <p>
+    <symbolicresponse answer="42">
+      <textline size="90" math="1"/>
+    </symbolicresponse>
+  </p>
+  <p>
+&#xA0;<br/>&#xA0;<br/></p>
+  <p>
+Here is the [mathjaxinline]\LaTeX[/mathjaxinline] code for the problem: </p>
+  <pre>
+\documentclass[12pt]{article}
+
+\usepackage{edXpsl}	% edX
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{edXproblem}{Latex Example Problem 2}{40}
+
+\section{Example of symbolic response problem}  
+ 
+This is a sample problem, which is worth 40 points.  What is the number made famous by
+Hitchhiker's guide to the galaxy?
+
+\edXabox{type='symbolic' size='90' expect='42' }
+
+\end{edXproblem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+</pre>
+</problem>

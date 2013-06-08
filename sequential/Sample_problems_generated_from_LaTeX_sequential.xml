@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<sequential format="" display_name="Sample problems generated from LaTeX">
+  <problem url_name="Symbolic_response_problem_in_LaTeX_problem"/>
+  <problem url_name="Custom_response_problem_in_LaTeX_problem"/>
+  <problem url_name="Option_response_problem_in_LaTeX_problem"/>
+  <problem url_name="Problem_with_hint_in_LaTeX_problem"/>
+  <problem url_name="Problem_with_ShowHide_hint_in_LaTeX_problem"/>
+  <html url_name="A_complete_edX_course_in_LaTeX_html"/>
+  <problem url_name="Example_E-text_page_problem"/>
+  <problem url_name="Example_inline_textinput_answer_box_problem"/>
+</sequential>

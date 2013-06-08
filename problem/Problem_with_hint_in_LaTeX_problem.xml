@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<problem type="lecture" showanswer="attempted" rerandomize="never" title="Problem with hint in LaTeX" display_name="Problem with hint in LaTeX">
+  <p>
+    <h1>Example of problem with hint</h1>
+  </p>
+  <p>
+This problem demonstrates a question with hints, based on using the <tt class="tt">hintfn</tt> method. </p>
+  <script>
+def test_str(expect, ans):
+  print expect, ans
+  ans = ans.strip("'")
+  ans = ans.strip('"')
+  return expect == ans.lower()
+
+def hint_fn(answer_ids, student_answers, new_cmap, old_cmap):
+  aid = answer_ids[0]
+  ans = str(student_answers[aid]).lower()
+  print 'hint_fn called, ans=', ans
+  hint = ''
+  if 'java' in ans:
+     hint = 'that is only good for drinking'
+  elif 'pascal' in ans:
+     hint = 'that is a beatnick language'
+  elif 'fortran' in ans:
+     hint = 'those were the good days'
+  elif 'clu' in ans:
+     hint = 'you must be invariant'
+  if hint:
+    hint = "&lt;font color='blue'&gt;Hint: {0}&lt;/font&gt;".format(hint)
+    new_cmap.set_hint_and_mode(aid,hint,'always')
+</script>
+  <p>
+What is the best programming language that exists today? You may enter your answer in upper or lower case, with or without quotes. </p>
+  <p>
+    <customresponse cfn="test_str" expect="python">
+      <textline correct_answer="python"/>
+      <hintgroup hintfn="hint_fn"/>
+    </customresponse>
+  </p>
+  <p>
+Here is the [mathjaxinline]{\rm \LaTeX }[/mathjaxinline] code for the problem: </p>
+  <pre>
+\documentclass[12pt]{article}
+
+\usepackage{edXpsl}	% edX
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{edXproblem}{Latex Example Problem with Hint}{10}
+
+\section{Example of problem with hint}  
+
+This problem demonstrates a question with hints, based on using the
+{\tt hintfn} method.
+
+\begin{edXscript}
+def test_str(expect, ans):
+  print expect, ans
+  ans = ans.strip("'")
+  ans = ans.strip('"')
+  return expect == ans.lower()
+
+def hint_fn(answer_ids, student_answers, new_cmap, old_cmap):
+  aid = answer_ids[0]
+  ans = str(student_answers[aid]).lower()
+  print 'hint_fn called, ans=', ans
+  hint = ''
+  if 'java' in ans:
+     hint = 'that is only good for drinking'
+  elif 'pascal' in ans:
+     hint = 'that is a beatnick language'
+  elif 'fortran' in ans:
+     hint = 'those were the good days'
+  elif 'clu' in ans:
+     hint = 'you must be invariant'
+  if hint:
+    hint = "&lt;font color='blue'&gt;Hint: {0}&lt;/font&gt;".format(hint)
+    new_cmap.set_hint_and_mode(aid,hint,'always')
+\end{edXscript}
+
+What is the best programming language that exists today?   You may
+enter your answer in upper or lower case, with or without quotes.
+
+\edXabox{type="custom" cfn='test_str' expect='python' hintfn='hint_fn'}
+
+\end{edXproblem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+</pre>
+</problem>

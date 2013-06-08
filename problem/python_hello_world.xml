@@ -1,0 +1,23 @@
+<problem display_name="Python Hello World Code Grader">
+
+<startouttext/>
+<p>Write a piece of Python code that prints out the string '<code>hello world</code>' if the value of a integer variable, <code>happy</code>, is strictly greater than 2.</p>
+<p>For problems such as these, do not include <code>raw_input</code> statements or define the variable <code>happy</code> in any way. Our automating testing
+will provide a value of <code>happy</code> for you - so write your code in the following box assuming <code>happy</code> is already defined.</p>
+<endouttext/>
+
+<coderesponse>
+<textbox rows="10" cols="80" mode="python" tabsize="4"/>
+<codeparam>
+<initial_display></initial_display>
+<answer_display>
+if happy &gt; 2:
+    print('hello world')
+</answer_display>
+<grader_payload>
+{"grader": "finger_exercises/L2/if_happy/grade_if_happy.py"}
+</grader_payload>
+</codeparam>
+</coderesponse>
+
+</problem>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<problem type="lecture" showanswer="attempted" rerandomize="never" title="Option response problem in LaTeX" display_name="Option response problem in LaTeX">
+  <p>
+    <h1>Example of option response</h1>
+  </p>
+  <p>
+This is a sample problem, which is worth 10 points. </p>
+  <p>
+Give the correct python <tt class="tt">type</tt> for the following expressions. Select <tt class="tt">noneType</tt> if the expression is illegal. </p>
+  <ul class="itemize">
+    <li>
+      <p>
+        <tt class="tt">3</tt>
+        <optionresponse>
+          <optioninput options="('noneType','int','float')" correct="int"/>
+        </optionresponse>
+      </p>
+    </li>
+    <li>
+      <p>
+        <tt class="tt">5.2</tt>
+        <optionresponse>
+          <optioninput options="('noneType','int','float')" correct="float"/>
+        </optionresponse>
+      </p>
+    </li>
+    <li>
+      <p>
+        <tt class="tt">3/2</tt>
+        <optionresponse>
+          <optioninput options="('noneType','int','float')" correct="int"/>
+        </optionresponse>
+      </p>
+    </li>
+    <li>
+      <p>
+        <tt class="tt">1+[]</tt>
+        <optionresponse>
+          <optioninput options="('noneType','int','float')" correct="noneType"/>
+        </optionresponse>
+      </p>
+    </li>
+  </ul>
+</problem>

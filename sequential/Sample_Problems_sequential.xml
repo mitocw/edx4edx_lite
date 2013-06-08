@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<sequential format="" Due="Dec 12-25" display_name="Sample Problems">
+  <problem url_name="Option_Response_problem"/>
+  <problem url_name="Multiple_Choice_problem"/>
+  <problem url_name="String_Response_problem"/>
+  <problem url_name="Numerical_Response_problem"/>
+  <problem url_name="Formula_Response_problem"/>
+  <problem url_name="Symbolic_Math_Response_problem"/>
+  <problem url_name="Image_Response_problem"/>
+  <problem url_name="Custom_Response_problem"/>
+  <problem url_name="Problem_with_solution_problem"/>
+  <problem url_name="Schematic_Response_problem"/>
+  <!-- <problem url_name="example_drag_and_drop_tabular"/> 
+  <problem url_name="example_drag_and_drop_pedigree"/>-->
+</sequential>

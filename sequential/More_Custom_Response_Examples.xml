@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<sequential format="" Due="Dec 12-25" display_name="More Custom Response Examples" rerandomize="never">
+  <problem url_name="test_customresponse1"/>
+  <problem url_name="test_customresponse2"/>
+  <problem url_name="test_customresponse3"/>
+  <problem url_name="test_customresponse4"/>
+  <problem url_name="test_customresponse5"/>
+</sequential>

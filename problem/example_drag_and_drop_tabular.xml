@@ -1,0 +1,55 @@
+<problem display_name="Drag and Drop: Tabular data types">
+
+<text>
+This is an example of a drag and drop problem with one item per target, and with outlines around the targets.
+</text>
+
+    <customresponse>
+        <text>
+            <h4>One of the traits studied by Mendel was seed color. He had plants
+                that produced green peas and plants that produced yellow peas.
+                Consider the following cross.
+            </h4>
+            <br/>
+        </text>
+
+        <drag_and_drop_input img="/static/images/genetics1.png"
+            target_outline="true"
+            one_per_target="true" no_labels="true">
+            <draggable id="1" label="AA" can_reuse="true" />
+            <draggable id="2" label="Aa" can_reuse="true" />
+            <draggable id="3" label="aa" can_reuse="true" />
+
+            <target id="t1" x="170" y="37" w="150" h="25"/>
+            <target id="t2" x="415" y="37" w="150" h="25"/>
+            <target id="t3" x="290" y="82" w="150" h="25"/>
+
+        </drag_and_drop_input>
+        <text>
+            <p>Drag and drop the appropriate genotypes into the boxes above.</p>
+        </text>
+        <answer type="loncapa/python"><![CDATA[
+correct_answer = [
+{'draggables': ['1'],
+'targets': ['t1' ],
+'rule':'anyof'
+},
+{'draggables': ['2'],
+'targets': ['t2' ],
+'rule':'anyof'
+},
+{'draggables': ['3'],
+'targets': ['t3' ],
+'rule':'anyof'
+}]
+if draganddrop.grade(submission[0], correct_answer):
+    correct = ['correct']
+else:
+    correct = ['incorrect']
+        ]]>
+        </answer>
+    </customresponse>
+
+
+
+</problem>
