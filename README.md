@@ -9,3 +9,6 @@ graded) response, and schematic response problems.
 
 A description of latex2edx is also provided, with examples (though
 some of that needs to be updated).
+
+No support is available for this repository and the only available documentation 
+is that which is in the source code. Contributions are welcome.
